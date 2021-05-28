@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "include-media": "^1.4.10",
+    "typed.js": "^2.0.12"
+  }
+}

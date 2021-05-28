@@ -1,0 +1,119 @@
+// breakpoints for media
+$breakpoints: (sm: 540px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px);
+
+@mixin container($size: sm) {
+  margin-left: auto;
+  margin-right: auto;
+
+  @if $size==sm {
+    @include media('<sm') {
+      max-width: 100%;
+    }
+
+    @include media('>=sm', '<md') {
+      max-width: 540px;
+    }
+
+    @include media('>=md', '<lg') {
+      max-width: 720px;
+    }
+
+    @include media('>=lg', '<xl') {
+      max-width: 960px;
+    }
+
+    @include media('>=xl', '<xxl') {
+      max-width: 1140px;
+    }
+
+    @include media('>xxl') {
+      max-width: 1320px;
+    }
+  }
+
+  @else if $size==md {
+    @include media('<md') {
+      max-width: 100%;
+    }
+
+    @include media('>=md', '<lg') {
+      max-width: 720px;
+    }
+
+    @include media('>=lg', '<xl') {
+      max-width: 960px;
+    }
+
+    @include media('>=xl', '<xxl') {
+      max-width: 1140px;
+    }
+
+    @include media('>xxl') {
+      max-width: 1320px;
+    }
+  }
+
+  @else if $size==lg {
+    @include media('<lg') {
+      max-width: 100%;
+    }
+
+    @include media('>=lg', '<xl') {
+      max-width: 960px;
+    }
+
+    @include media('>=xl', '<xxl') {
+      max-width: 1140px;
+    }
+
+    @include media('>xxl') {
+      max-width: 1320px;
+    }
+  }
+
+  @else if $size==xl {
+    @include media('<xl') {
+      max-width: 100%;
+    }
+
+    @include media('>=xl', '<xxl') {
+      max-width: 1140px;
+    }
+
+    @include media('>xxl') {
+      max-width: 1320px;
+    }
+  }
+
+  @else if $size==xxl {
+    @include media('<xxl') {
+      max-width: 100%;
+    }
+
+    @include media('>xxl') {
+      max-width: 1320px;
+    }
+  }
+
+  @else {
+    max-width: 100%;
+  }
+}
+
+@mixin showAt($size: sm) {
+  @include media('<#{$size}') {
+    display: none;
+  }
+}
+
+@mixin hideAt($size: all) {
+  @if $size==all {
+    display: none;
+  }
+
+  @else {
+    @include media('>#{$size}') {
+      display: none;
+    }
+  }
+}

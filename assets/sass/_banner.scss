@@ -1,76 +1,87 @@
 .banner {
-  @include container();
+  &-wrapper {
+    @include container();
 
-  position: relative;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  column-gap: 2rem;
-  align-items: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 2rem;
+    align-items: center;
 
-  &-text {
+    .banner-text {
+      h1 {
+        margin-bottom: .5rem;
 
-    // background-color: #555;
-    h1 {
-      margin-bottom: .5rem;
+        span {
+          display: block;
 
-      span {
-        display: block;
+          &:nth-child(1) {
+            font-size: 1.5em;
+            letter-spacing: 0.4em;
+            font-weight: 500;
+            color: $color-primary;
+            margin-bottom: .2rem;
+          }
 
-        &:nth-child(1) {
-          font-size: 1.5em;
-          letter-spacing: 0.4em;
-          font-weight: 500;
-          color: $color-primary;
-          margin-bottom: .2rem;
+          &:nth-child(2) {
+            font-size: 3.8em;
+            letter-spacing: .075em;
+            font-weight: 900;
+            color: $color-primary;
+            margin-bottom: 1rem;
+
+            @include media('<sm') {
+              font-size: 3.4em;
+            }
+          }
+
+          &:nth-child(3) {
+            font-size: 2em;
+            font-weight: 700;
+            color: #333;
+          }
         }
+      }
 
-        &:nth-child(2) {
-          font-size: 3.8em;
-          letter-spacing: .075em;
-          font-weight: 900;
-          color: $color-primary;
-          margin-bottom: 1rem;
-        }
+      .typed-container {
+        display: inline-block;
+        padding: .5rem 1rem;
+        background-color: #333;
+        font-size: 1.8em;
+        font-weight: 500;
+        color: #fff;
+        border-radius: 2px;
+        margin-bottom: 2rem;
+      }
 
-        &:nth-child(3) {
-          font-size: 2em;
-          font-weight: 700;
-          color: #333;
-        }
+      .text-about {
+        width: 27rem;
+        font-size: 1.1em;
+        line-height: 25px;
+        letter-spacing: .15em;
+        color: #333;
+      }
+
+      @include media('<lg') {
+        font-size: .9em;
       }
     }
 
-    .typed-container {
-      display: inline-block;
-      padding: .5rem 1rem;
-      background-color: #333;
-      font-size: 2em;
-      font-weight: 500;
-      color: #fff;
-      border-radius: 2px;
-      margin-bottom: 2rem;
+    .banner-img {
+      @include media('<md') {
+        width: 80%;
+        margin: auto;
+      }
     }
 
-    .text-about {
-      font-size: 1.1em;
-      line-height: 25px;
-      letter-spacing: .15em;
-      color: #333;
+    @include media('<xxl') {
+      padding: 4rem 1rem;
     }
-  }
 
-  &-img {
     @include media('<md') {
-      width: 80%;
-      margin: auto;
+      grid-template-columns: 100%;
     }
   }
 
-  @include media('<lg') {
-    padding: 4rem 1rem;
-  }
 
-  @include media('<md') {
-    grid-template-columns: 100%;
-  }
 }

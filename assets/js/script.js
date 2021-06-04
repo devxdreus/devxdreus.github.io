@@ -17,3 +17,35 @@ const typed = new Typed('#typed', {
   shuffle: true,
   loop: true
 });
+
+
+const btnSkill = document.querySelectorAll('.about nav button');
+const skillTab = document.getElementsByClassName('skills-set');
+
+btnSkill.forEach((value, key) => {
+  value.addEventListener('click', function () {
+    btnSkill.forEach((e) => {
+      e.classList.remove('active')
+    })
+    this.classList.add('active');
+
+    for (const skills of skillTab) {
+
+      if (this.dataset.toggle == skills.dataset.skills) {
+
+        let $i = 0;
+        for (const skill of skills.children) {
+          setTimeout(() => {
+            skill.classList.remove('show-transition');
+
+            setTimeout(() => {
+              skill.classList.remove('show')
+            }, 300 * $i);
+          }, 300 * $i);
+
+          $i++;
+        }
+      }
+    }
+  })
+})

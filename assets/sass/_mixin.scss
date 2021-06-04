@@ -117,3 +117,10 @@ $breakpoints: (sm: 540px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px);
     }
   }
 }
+
+@mixin vectorPosition($pos1, $pos2, $pos1-name: top, $pos2-name: left, $z: -1) {
+  position: absolute;
+  z-index: $z;
+  #{$pos1-name}: $pos1;
+  #{$pos2-name}: $pos2;
+}

@@ -1,0 +1,145 @@
+.about {
+  background-color: #eee;
+  margin-top: 16rem;
+
+  &-wrapper {
+    @include container();
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    h2 {
+      font-size: 3.5em;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+
+      span {
+        color: $color-primary;
+      }
+    }
+
+    p {
+      font-size: 1.1em;
+      letter-spacing: .05em;
+      line-height: 1.5rem;
+      max-width: 54rem;
+      margin: 2rem auto;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      column-gap: 2rem;
+
+      &-wrapper {
+        text-align: start;
+
+        nav button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          font-family: $font-family;
+          letter-spacing: .05em;
+          font-size: 1em;
+          font-weight: 500;
+          text-decoration: none;
+          color: $color-primary;
+          margin-right: 3rem;
+          margin-bottom: 1.5rem;
+          padding: .3rem .2rem;
+
+          &.active,
+          &:hover {
+            color: $color-primary;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 1px;
+            background-color: $color-primary;
+            bottom: 0;
+            left: 0;
+            border-radius: 1px;
+            transition: .3s;
+          }
+
+          &:hover::after,
+          &.active::after {
+            width: 100%;
+          }
+        }
+
+        .skills-set {
+          overflow-x: hidden;
+
+          .skill-box {
+            padding: .8rem 1.5rem;
+            border-radius: 4px;
+            background-color: adjust-color($color: #eeeeee, $alpha: -0.5);
+            box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            margin-bottom: 1.2rem;
+            transition: .5s ease-in-out;
+            display: none;
+            opacity: 0;
+            transform: translateX(8rem);
+
+            &.show {
+              display: block;
+            }
+
+            &.show-transition {
+              transition: .3s;
+              opacity: 1;
+              transform: translateX(0);
+            }
+
+
+            .skill-name {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: .5rem;
+              // font-size: .9em;
+
+              span {
+                color: #808080;
+              }
+            }
+
+            .slider-container {
+              border: 3px solid $color-primary;
+              border-radius: 4px;
+              padding: .2rem;
+
+              .slider {
+                width: 50%;
+                height: 1.5rem;
+                background-color: $color-primary;
+                border-radius: 8px;
+              }
+            }
+
+            &:hover {
+              transform: scale(1.02);
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .wave-1 svg {
+    position: absolute;
+    z-index: -2;
+    // top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: -10rem;
+  }
+}

@@ -1,0 +1,63 @@
+.bg-vector {
+
+  .dotted {
+    position: absolute;
+    top: 13rem;
+    width: 100%;
+    height: 100%;
+    background-image: url('../vector/dotted.svg');
+    background-size: contain;
+  }
+
+  .blob-1 {
+    @include vectorPosition(5rem, -8rem)
+  }
+
+  .blob-2 {
+    @include vectorPosition(15rem, 0, top, right);
+    overflow-x: hidden;
+
+    svg {
+      margin-right: -22rem
+    }
+  }
+
+  .blob-3 {
+    @include vectorPosition(35rem, 27rem);
+  }
+
+  .plane {
+    @include vectorPosition(10rem, 4rem);
+  }
+
+  .dot-square {
+    @include vectorPosition(45rem, 0);
+  }
+
+}
+
+// .bg-vector>* {
+//   position: absolute;
+//   z-index: -1;
+// }
+
+// .bg-vector {
+//   .blob-1 {
+//     top: 5rem;
+//     left: -8rem;
+//   }
+
+//   .blob-2 {
+//     top: 15rem;
+//     right: 0;
+//     overflow-x: hidden;
+
+//     svg {
+//       margin-right: -22rem;
+//     }
+//   }
+
+//   .blob-3 {
+//     top: 3;
+//   }
+// }

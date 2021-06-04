@@ -18,21 +18,22 @@ sans-serif;
 
 
 body {
+  position: relative;
   font-family: $font-family;
   letter-spacing: 0.02em;
 
-  @include media('<lg') {
-    font-size: .9em;
-  }
+  // @include media('<lg') {
+  //   font-size: .9em;
+  // }
 
-  @include media('<md') {
-    font-size: .8em;
-  }
+  // @include media('<md') {
+  //   font-size: .8em;
+  // }
 
-  @include media('<sm') {
-    font-size: .7em;
-  }
+  // @include media('<sm') {
+  //   font-size: .7em;
+  // }
 }
 
 
-@import 'header', 'banner';
+@import 'header', 'banner', 'about', 'background';

@@ -20,7 +20,42 @@ const typed = new Typed('#typed', {
 
 
 const btnSkill = document.querySelectorAll('.about nav button');
-const skillTab = document.getElementsByClassName('skills-set');
+const skillGen = document.getElementById('skill-gen');
+const skillTech = document.getElementById('skill-tech');
+
+const skillDisplay = (show, hide) => {
+  show.classList.add('active');
+  hide.classList.remove('active');
+
+  let $i = 0;
+  for (const skill of hide.children) {
+
+    setTimeout(() => {
+      skill.classList.remove('show-transition');
+    }, 200 * $i);
+
+    setTimeout(() => {
+      skill.classList.remove('show');
+    }, 200 * (show.children.length + 1));
+
+    $i++;
+  }
+
+  setTimeout(() => {
+    for (const skill of show.children) {
+      skill.classList.add('show')
+    }
+
+    let $i = 0;
+    for (const skill of show.children) {
+
+      setTimeout(() => {
+        skill.classList.add('show-transition');
+      }, 200 * ($i + 2));
+      $i++;
+    }
+  }, 200 * show.children.length);
+}
 
 btnSkill.forEach((value, key) => {
   value.addEventListener('click', function () {
@@ -29,22 +64,14 @@ btnSkill.forEach((value, key) => {
     })
     this.classList.add('active');
 
-    for (const skills of skillTab) {
+    if (this.dataset.toggle == 'general') {
+      if (!skillGen.classList.contains('active')) {
+        skillDisplay(skillGen, skillTech);
+      }
 
-      if (this.dataset.toggle == skills.dataset.skills) {
-
-        let $i = 0;
-        for (const skill of skills.children) {
-          setTimeout(() => {
-            skill.classList.remove('show-transition');
-
-            setTimeout(() => {
-              skill.classList.remove('show')
-            }, 300 * $i);
-          }, 300 * $i);
-
-          $i++;
-        }
+    } else {
+      if (!skillTech.classList.contains('active')) {
+        skillDisplay(skillTech, skillGen);
       }
     }
   })

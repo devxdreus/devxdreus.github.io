@@ -10,7 +10,21 @@
   }
 
   .blob-1 {
-    @include vectorPosition(5rem, -8rem)
+    @include vectorPosition(5rem, -8rem);
+
+    svg {
+      @include media('<lg') {
+        max-width: 35rem;
+      }
+
+      @include media('<sm') {
+        max-width: 90%;
+      }
+    }
+
+    @include media('<lg') {
+      top: 1rem;
+    }
   }
 
   .blob-2 {
@@ -18,16 +32,73 @@
     overflow-x: hidden;
 
     svg {
-      margin-right: -22rem
+      margin-right: -22rem;
+
+      @include media('<lg') {
+        margin-right: -15rem;
+        max-width: 32rem;
+      }
+
+      @include media('<sm') {
+        // margin-right: -20rem;
+        max-width: 30rem;
+      }
+    }
+
+    @include media('<lg') {
+      top: 5rem;
+    }
+
+    @include media('<md') {
+      top: 20rem;
     }
   }
 
   .blob-3 {
     @include vectorPosition(35rem, 27rem);
+
+    svg {
+      @include media('<sm') {
+        max-width: 80%;
+      }
+    }
+
+    @include media('<lg') {
+      top: 32rem;
+      left: 18rem;
+    }
+
+    @include media('<md') {
+      left: 10rem;
+    }
+
+    @include media('<sm') {
+      top: 28rem;
+      left: 1rem;
+    }
   }
 
   .plane {
     @include vectorPosition(10rem, 4rem);
+
+    svg {
+      @include media('<lg') {
+        max-width: 15rem;
+      }
+
+      @include media('<sm') {
+        max-width: 60%;
+      }
+    }
+
+    @include media('<lg') {
+      top: 4rem;
+      left: 8rem
+    }
+
+    @include media('<sm') {
+      left: 1rem;
+    }
   }
 
   .dot-square {

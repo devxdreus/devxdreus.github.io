@@ -496,6 +496,12 @@ header nav .nav-toggle.active span:nth-child(3) {
   color: #333;
 }
 
+@media (max-width: 539px) {
+  .banner-wrapper .banner-text .text-about {
+    width: 100%;
+  }
+}
+
 @media (max-width: 991px) {
   .banner-wrapper .banner-text {
     font-size: .9em;
@@ -598,8 +604,17 @@ header nav .nav-toggle.active span:nth-child(3) {
           column-gap: 2rem;
 }
 
+@media (max-width: 767px) {
+  .about-wrapper .skills-img {
+    margin: auto;
+    width: 80%;
+  }
+}
+
 .about-wrapper .skills-wrapper {
   text-align: start;
+  padding: 1rem;
+  overflow-x: hidden;
 }
 
 .about-wrapper .skills-wrapper nav button {
@@ -639,10 +654,6 @@ header nav .nav-toggle.active span:nth-child(3) {
 
 .about-wrapper .skills-wrapper nav button:hover::after, .about-wrapper .skills-wrapper nav button.active::after {
   width: 100%;
-}
-
-.about-wrapper .skills-wrapper .skills-set {
-  overflow-x: hidden;
 }
 
 .about-wrapper .skills-wrapper .skills-set .skill-box {
@@ -706,12 +717,25 @@ header nav .nav-toggle.active span:nth-child(3) {
           transform: scale(1.02);
 }
 
+@media (max-width: 767px) {
+  .about-wrapper .skills {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
 .about .wave-1 svg {
   position: absolute;
   z-index: -2;
   left: 0;
   width: 100%;
   margin-top: -10rem;
+}
+
+@media (max-width: 539px) {
+  .about .wave-1 svg {
+    margin-top: -9rem;
+  }
 }
 
 .bg-vector .dotted {
@@ -730,6 +754,24 @@ header nav .nav-toggle.active span:nth-child(3) {
   left: -8rem;
 }
 
+@media (max-width: 991px) {
+  .bg-vector .blob-1 svg {
+    max-width: 35rem;
+  }
+}
+
+@media (max-width: 539px) {
+  .bg-vector .blob-1 svg {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 991px) {
+  .bg-vector .blob-1 {
+    top: 1rem;
+  }
+}
+
 .bg-vector .blob-2 {
   position: absolute;
   z-index: -1;
@@ -742,6 +784,31 @@ header nav .nav-toggle.active span:nth-child(3) {
   margin-right: -22rem;
 }
 
+@media (max-width: 991px) {
+  .bg-vector .blob-2 svg {
+    margin-right: -15rem;
+    max-width: 32rem;
+  }
+}
+
+@media (max-width: 539px) {
+  .bg-vector .blob-2 svg {
+    max-width: 30rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .bg-vector .blob-2 {
+    top: 5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .bg-vector .blob-2 {
+    top: 20rem;
+  }
+}
+
 .bg-vector .blob-3 {
   position: absolute;
   z-index: -1;
@@ -749,11 +816,62 @@ header nav .nav-toggle.active span:nth-child(3) {
   left: 27rem;
 }
 
+@media (max-width: 539px) {
+  .bg-vector .blob-3 svg {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 991px) {
+  .bg-vector .blob-3 {
+    top: 32rem;
+    left: 18rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .bg-vector .blob-3 {
+    left: 10rem;
+  }
+}
+
+@media (max-width: 539px) {
+  .bg-vector .blob-3 {
+    top: 28rem;
+    left: 1rem;
+  }
+}
+
 .bg-vector .plane {
   position: absolute;
   z-index: -1;
   top: 10rem;
   left: 4rem;
+}
+
+@media (max-width: 991px) {
+  .bg-vector .plane svg {
+    max-width: 15rem;
+  }
+}
+
+@media (max-width: 539px) {
+  .bg-vector .plane svg {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 991px) {
+  .bg-vector .plane {
+    top: 4rem;
+    left: 8rem;
+  }
+}
+
+@media (max-width: 539px) {
+  .bg-vector .plane {
+    left: 1rem;
+  }
 }
 
 .bg-vector .dot-square {

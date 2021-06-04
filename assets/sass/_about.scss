@@ -31,8 +31,17 @@
       grid-template-columns: 50% 50%;
       column-gap: 2rem;
 
+      &-img {
+        @include media('<md') {
+          margin: auto;
+          width: 80%;
+        }
+      }
+
       &-wrapper {
         text-align: start;
+        padding: 1rem;
+        overflow-x: hidden;
 
         nav button {
           background-color: transparent;
@@ -75,7 +84,7 @@
         }
 
         .skills-set {
-          overflow-x: hidden;
+          // overflow-x: hidden;
 
           .skill-box {
             padding: .8rem 1.5rem;
@@ -130,6 +139,10 @@
           }
         }
       }
+
+      @include media('<md') {
+        grid-template-columns: 100%;
+      }
     }
 
   }
@@ -141,5 +154,9 @@
     left: 0;
     width: 100%;
     margin-top: -10rem;
+
+    @include media('<sm') {
+      margin-top: -9rem;
+    }
   }
 }

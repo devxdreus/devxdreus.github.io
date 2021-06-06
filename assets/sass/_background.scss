@@ -59,7 +59,7 @@
 
     svg {
       @include media('<sm') {
-        max-width: 80%;
+        max-width: 70%;
       }
     }
 
@@ -74,7 +74,7 @@
 
     @include media('<sm') {
       top: 28rem;
-      left: 1rem;
+      left: 10%;
     }
   }
 

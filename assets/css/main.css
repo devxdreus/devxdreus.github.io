@@ -871,6 +871,7 @@ header nav .nav-social .btn-primary:hover {
 
 @media (max-width: 539px) {
   .bg-vector .blob-2 svg {
+    margin-right: -22rem;
     max-width: 30rem;
   }
 }
@@ -915,7 +916,7 @@ header nav .nav-social .btn-primary:hover {
 
 @media (max-width: 539px) {
   .bg-vector .blob-3 {
-    top: 28rem;
+    top: 31rem;
     left: 10%;
   }
 }

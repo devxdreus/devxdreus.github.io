@@ -40,7 +40,7 @@
       }
 
       @include media('<sm') {
-        // margin-right: -20rem;
+        margin-right: -22rem;
         max-width: 30rem;
       }
     }
@@ -73,7 +73,7 @@
     }
 
     @include media('<sm') {
-      top: 28rem;
+      top: 31rem;
       left: 10%;
     }
   }

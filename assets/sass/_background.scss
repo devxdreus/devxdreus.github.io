@@ -105,30 +105,112 @@
     @include vectorPosition(45rem, 0);
   }
 
+  // about area
+  .vector-about {
+    &>* {
+      z-index: 1 !important;
+    }
+
+    .love-1 {
+      @include vectorPosition(62rem, 15rem);
+
+      @include media('<lg') {
+        top: 54rem;
+        left: 12%;
+      }
+    }
+
+    .love-2 {
+      @include vectorPosition(69rem, 8rem, 'top', 'right');
+
+      @include media('<lg') {
+        top: 64rem;
+        right: 5%;
+      }
+
+      @include media('<md') {
+        top: 73rem;
+      }
+
+      @include media('<sm') {
+        right: 1%;
+      }
+
+      svg {
+        @include media('<sm') {
+          width: 75%;
+          height: 75%
+        }
+      }
+    }
+
+    .bulb-1 {
+      @include vectorPosition(76rem, 4rem);
+
+      @include media('<lg') {
+        top: 65rem;
+      }
+
+      @include media('<md') {
+        top: 95rem;
+        left: 1%;
+      }
+    }
+
+    .bulb-2 {
+      @include vectorPosition(98rem, 6rem);
+
+      @include media('<lg') {
+        top: 85rem;
+        left: 5%;
+      }
+
+      @include media('<md') {
+        top: 130rem;
+        left: 5%;
+      }
+    }
+
+    .blob-4 {
+      @include vectorPosition(85rem, 10rem, 'top', 'right');
+
+      @include media('<xl') {
+        top: 79rem;
+        right: 5%;
+      }
+
+      @include media('<lg') {
+        top: 72rem;
+        right: 6%;
+      }
+
+      @include media('<md') {
+        top: 128rem;
+        right: 20%;
+      }
+
+      @include media('<sm') {
+        top: 122rem;
+        right: 0;
+        left: 20%;
+      }
+
+      svg {
+        @include media('<lg') {
+          width: 351px;
+          height: 283px;
+        }
+
+        @include media('<md') {
+          width: 90%;
+          height: 90%;
+        }
+
+        @include media('<sm') {
+          width: 75%;
+          height: 75%;
+        }
+      }
+    }
+  }
 }
-
-// .bg-vector>* {
-//   position: absolute;
-//   z-index: -1;
-// }
-
-// .bg-vector {
-//   .blob-1 {
-//     top: 5rem;
-//     left: -8rem;
-//   }
-
-//   .blob-2 {
-//     top: 15rem;
-//     right: 0;
-//     overflow-x: hidden;
-
-//     svg {
-//       margin-right: -22rem;
-//     }
-//   }
-
-//   .blob-3 {
-//     top: 3;
-//   }
-// }

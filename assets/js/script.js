@@ -1,5 +1,6 @@
 // import Typed from 'typed.js';
 
+// nav
 const nav = document.querySelector('.nav-toggle');
 nav.innerHTML = '<span></span><span></span><span></span>';
 
@@ -8,6 +9,7 @@ function navToggle() {
   document.querySelector('.nav-menu').classList.toggle('active');
 }
 
+// typed.js
 const typed = new Typed('#typed', {
   stringsElement: '#typed-strings',
   typeSpeed: 100,
@@ -19,6 +21,7 @@ const typed = new Typed('#typed', {
 });
 
 
+// skill-nav
 const btnSkill = document.querySelectorAll('.about nav button');
 const skillGen = document.getElementById('skill-gen');
 const skillTech = document.getElementById('skill-tech');
@@ -75,4 +78,12 @@ btnSkill.forEach((value, key) => {
       }
     }
   })
+})
+
+
+// skill slider width
+const skillSlider = document.querySelectorAll('.slider-container .slider');
+
+skillSlider.forEach(el => {
+  el.style.width = el.dataset.value;
 })

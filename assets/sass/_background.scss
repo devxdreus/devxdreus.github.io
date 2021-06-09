@@ -181,7 +181,7 @@
 
       @include media('<lg') {
         top: 72rem;
-        right: 6%;
+        right: 1%;
       }
 
       @include media('<md') {
@@ -197,11 +197,6 @@
 
       svg {
         @include media('<lg') {
-          width: 351px;
-          height: 283px;
-        }
-
-        @include media('<md') {
           width: 90%;
           height: 90%;
         }

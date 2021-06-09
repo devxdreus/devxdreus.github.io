@@ -1061,8 +1061,8 @@ header nav .nav-social .btn-primary:hover {
   opacity: 0;
   -webkit-animation: floatingY 2s ease-in-out infinite;
           animation: floatingY 2s ease-in-out infinite;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .services-wrapper .services-tab .box-wrapper:hover .glass-box {
@@ -1437,7 +1437,7 @@ header nav .nav-social .btn-primary:hover {
 @media (max-width: 991px) {
   .bg-vector .vector-about .blob-4 {
     top: 72rem;
-    right: 6%;
+    right: 1%;
   }
 }
 
@@ -1457,13 +1457,6 @@ header nav .nav-social .btn-primary:hover {
 }
 
 @media (max-width: 991px) {
-  .bg-vector .vector-about .blob-4 svg {
-    width: 351px;
-    height: 283px;
-  }
-}
-
-@media (max-width: 767px) {
   .bg-vector .vector-about .blob-4 svg {
     width: 90%;
     height: 90%;

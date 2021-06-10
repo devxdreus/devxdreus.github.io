@@ -208,4 +208,81 @@
       }
     }
   }
+
+  // services area
+  .plane-2 {
+    z-index: 1;
+    position: absolute;
+    top: 133rem;
+    left: 5%;
+
+    @include media('<xl') {
+      top: 120rem;
+    }
+
+    @include media('<lg') {
+      top: 109rem;
+    }
+
+    @include media('<md') {
+      top: 165rem;
+    }
+
+    @include media('<sm') {
+      top: 162rem;
+    }
+
+    svg {
+      @include media('<md') {
+        width: 90%;
+        height: 90%;
+      }
+
+      @include media('<sm') {
+        width: 80%;
+        height: 80%;
+      }
+    }
+  }
+
+  .plane-3 {
+    z-index: 1;
+    position: absolute;
+    top: 188rem;
+    right: 10%;
+    transform: rotateX(180deg) rotateZ(180deg);
+
+    @include media('<xxl') {
+      top: 185rem;
+    }
+
+    @include media('<xl') {
+      top: 172rem;
+    }
+
+    @include media('<lg') {
+      top: 190rem;
+    }
+
+    @include media('<md') {
+      top: 245rem;
+    }
+
+    @include media('<sm') {
+      top: 281rem;
+      right: 2%;
+    }
+
+    svg {
+      @include media('<md') {
+        width: 90%;
+        height: 90%;
+      }
+
+      @include media('<sm') {
+        width: 80%;
+        height: 80%;
+      }
+    }
+  }
 }

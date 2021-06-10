@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 3rem;
+    padding: 3rem 1em 0 1em;
 
     .heading {
       text-align: center;
@@ -80,23 +80,37 @@
         width: 100%;
       }
 
+      @include media('<sm') {
+        grid-template-columns: 100%;
+      }
+
       .box-wrapper {
         position: relative;
         width: 14rem;
         height: 18rem;
         margin: 6rem auto;
 
+        @include media('<sm') {
+          margin: 3rem auto;
+        }
+
         &::before {
           content: '';
           position: absolute;
           width: 8rem;
           height: 26rem;
-          top: -4rem;
+          top: -2rem;
           left: 3rem;
           transform: skewX(15deg);
           border-radius: 8px;
           background: #fff;
           transition: .5s;
+
+          @include media('<sm') {
+            width: 6rem;
+            height: 22rem;
+            left: 4rem;
+          }
         }
 
         &::after {
@@ -104,13 +118,17 @@
           position: absolute;
           width: 8rem;
           height: 26rem;
-          top: -4rem;
+          top: -2rem;
           left: 3rem;
           transform: skewX(15deg);
           border-radius: 8px;
           background: #fff;
           filter: blur(30px);
           transition: .5s;
+
+          @include media('<sm') {
+            height: 22rem;
+          }
         }
 
         &:hover::before,
@@ -161,6 +179,7 @@
           border-radius: 8px;
           transition: .5s;
 
+          // ===glass animation effect===
           // &::before {
           //   content: '';
           //   position: absolute;
@@ -203,6 +222,14 @@
           bottom: -2rem;
           left: -1rem;
 
+          @include media('<sm') {
+            top: -1rem;
+            right: -0.5rem;
+            bottom: -1rem;
+            left: -0.5rem;
+          }
+
+          // ===glass animation effect===
           // &::before {
           //   opacity: 1;
           //   top: -3rem;

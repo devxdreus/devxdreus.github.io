@@ -5,7 +5,7 @@
   min-height: 50rem;
 
   &-wrapper {
-    @include container();
+    @include container('xl');
     position: relative;
     z-index: 8;
     display: flex;
@@ -15,7 +15,6 @@
 
     .heading {
       text-align: center;
-      margin-bottom: 3rem;
 
       h2 {
         font-size: 3.5em;
@@ -32,6 +31,36 @@
         max-width: 54rem;
         margin: 2rem auto;
       }
+
+      span {
+        position: absolute;
+        display: block;
+        width: 8rem;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $color-primary;
+        margin-top: .5rem;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 3rem;
+          height: 4px;
+          border-radius: 2px;
+          background-color: $color-primary;
+          right: -3.5rem;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 1rem;
+          height: 4px;
+          border-radius: 2px;
+          background-color: $color-primary;
+          right: -5rem;
+        }
+      }
     }
 
     .services-tab {
@@ -40,16 +69,22 @@
       justify-content: center;
       align-items: center;
       width: 100%;
+      margin-bottom: 6rem;
 
       @include media('<lg') {
         grid-template-columns: 50% 50%;
+        width: 90%;
+      }
+
+      @include media('<md') {
+        width: 100%;
       }
 
       .box-wrapper {
         position: relative;
         width: 14rem;
         height: 18rem;
-        margin: 3rem auto;
+        margin: 6rem auto;
 
         &::before {
           content: '';
@@ -126,40 +161,40 @@
           border-radius: 8px;
           transition: .5s;
 
-          &::before {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 8px;
-            transition: .5s;
-            opacity: 0;
-            animation: floatingY 2s ease-in-out infinite;
-          }
+          // &::before {
+          //   content: '';
+          //   position: absolute;
+          //   z-index: 1;
+          //   top: 0;
+          //   left: 0;
+          //   width: 100%;
+          //   height: 100%;
+          //   background: rgba(255, 255, 255, 0.5);
+          //   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+          //   backdrop-filter: blur(10px);
+          //   border-radius: 8px;
+          //   transition: .5s;
+          //   opacity: 0;
+          //   animation: floatingY 2s ease-in-out infinite;
+          // }
 
-          &::after {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 8px;
-            transition: .5s;
-            opacity: 0;
-            animation: floatingY 2s ease-in-out infinite;
-            animation-delay: 1s;
-          }
+          // &::after {
+          //   content: '';
+          //   position: absolute;
+          //   z-index: 1;
+          //   right: 0;
+          //   bottom: 0;
+          //   width: 100%;
+          //   height: 100%;
+          //   background: rgba(255, 255, 255, 0.1);
+          //   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+          //   backdrop-filter: blur(10px);
+          //   border-radius: 8px;
+          //   transition: .5s;
+          //   opacity: 0;
+          //   animation: floatingY 2s ease-in-out infinite;
+          //   animation-delay: 1s;
+          // }
         }
 
         &:hover .glass-box {
@@ -168,21 +203,21 @@
           bottom: -2rem;
           left: -1rem;
 
-          &::before {
-            opacity: 1;
-            top: -3rem;
-            left: 3rem;
-            width: 7rem;
-            height: 7rem;
-          }
+          // &::before {
+          //   opacity: 1;
+          //   top: -3rem;
+          //   left: 3rem;
+          //   width: 7rem;
+          //   height: 7rem;
+          // }
 
-          &::after {
-            opacity: 1;
-            bottom: -3rem;
-            right: -1rem;
-            width: 7rem;
-            height: 7rem;
-          }
+          // &::after {
+          //   opacity: 1;
+          //   bottom: -3rem;
+          //   right: -1rem;
+          //   width: 7rem;
+          //   height: 7rem;
+          // }
         }
 
         &:hover .content-box {
@@ -249,6 +284,67 @@
       background-color: #333;
       top: 0;
       left: 0;
+    }
+  }
+
+  .wave-3 {
+    position: absolute;
+    bottom: -36rem;
+    z-index: -2;
+    width: 100%;
+
+    @include media('<xxl') {
+      bottom: -33rem;
+    }
+
+    @include media('<xl') {
+      bottom: -31rem;
+    }
+
+    @include media('<lg') {
+      bottom: -28rem;
+    }
+
+    @include media('<md') {
+      bottom: -25rem;
+    }
+
+    @include media('<sm') {
+      bottom: -23rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3.5rem;
+      background-color: #333;
+      top: 0;
+      left: 0;
+
+      @include media('<xxl') {
+        top: 1rem;
+      }
+
+      @include media('<xl') {
+        top: 3.5rem
+      }
+
+      @include media('<lg') {
+        top: 6rem;
+      }
+
+      @include media('<md') {
+        top: 8.5rem;
+      }
+
+      @include media('<sm') {
+        top: 11rem;
+      }
+    }
+
+    svg {
+      width: 100%;
     }
   }
 

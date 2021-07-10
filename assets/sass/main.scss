@@ -1,21 +1,17 @@
-@import 'reset';
+@import "reset";
 // vendor
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500;700;900&display=swap');
-@import './../../node_modules/include-media/dist/include-media';
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import "./../../node_modules/include-media/dist/include-media";
 
-@import 'mixin';
-
-
+@import "mixin";
 
 // variable
-$color-primary: #6A12E8;
-$color-secondary: #8B09FF;
-$color-third: #4A40FF;
-$color-fourth: #2B04E8;
+$color-primary: #6a12e8;
+$color-secondary: #8b09ff;
+$color-third: #4a40ff;
+$color-fourth: #2b04e8;
 
-$font-family: 'Roboto',
-sans-serif;
-
+$font-family: "Roboto", sans-serif;
 
 body {
   position: relative;
@@ -35,5 +31,5 @@ body {
   // }
 }
 
-
-@import 'header', 'banner', 'about', 'services', 'background';
+@import "header", "banner", "about", "services", "project", "footer",
+  "background";

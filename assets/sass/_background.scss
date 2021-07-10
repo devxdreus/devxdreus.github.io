@@ -1,11 +1,10 @@
 .bg-vector {
-
   .dotted {
     position: absolute;
     top: 13rem;
     width: 100%;
-    height: 100%;
-    background-image: url('../vector/dotted.svg');
+    height: 95%;
+    background-image: url("../vector/dotted.svg");
     background-size: contain;
   }
 
@@ -13,16 +12,16 @@
     @include vectorPosition(5rem, -8rem);
 
     svg {
-      @include media('<lg') {
+      @include media("<lg") {
         max-width: 35rem;
       }
 
-      @include media('<sm') {
+      @include media("<sm") {
         max-width: 90%;
       }
     }
 
-    @include media('<lg') {
+    @include media("<lg") {
       top: 1rem;
     }
   }
@@ -34,22 +33,22 @@
     svg {
       margin-right: -22rem;
 
-      @include media('<lg') {
+      @include media("<lg") {
         margin-right: -15rem;
         max-width: 32rem;
       }
 
-      @include media('<sm') {
+      @include media("<sm") {
         margin-right: -22rem;
         max-width: 30rem;
       }
     }
 
-    @include media('<lg') {
+    @include media("<lg") {
       top: 5rem;
     }
 
-    @include media('<md') {
+    @include media("<md") {
       top: 20rem;
     }
   }
@@ -58,21 +57,21 @@
     @include vectorPosition(35rem, 27rem);
 
     svg {
-      @include media('<sm') {
+      @include media("<sm") {
         max-width: 70%;
       }
     }
 
-    @include media('<lg') {
+    @include media("<lg") {
       top: 32rem;
       left: 18rem;
     }
 
-    @include media('<md') {
+    @include media("<md") {
       left: 10rem;
     }
 
-    @include media('<sm') {
+    @include media("<sm") {
       top: 31rem;
       left: 10%;
     }
@@ -82,21 +81,21 @@
     @include vectorPosition(10rem, 4rem);
 
     svg {
-      @include media('<lg') {
+      @include media("<lg") {
         max-width: 15rem;
       }
 
-      @include media('<sm') {
+      @include media("<sm") {
         max-width: 60%;
       }
     }
 
-    @include media('<lg') {
+    @include media("<lg") {
       top: 4rem;
-      left: 8rem
+      left: 8rem;
     }
 
-    @include media('<sm') {
+    @include media("<sm") {
       left: 1rem;
     }
   }
@@ -107,39 +106,39 @@
 
   // about area
   .vector-about {
-    &>* {
+    & > * {
       z-index: 1 !important;
     }
 
     .love-1 {
       @include vectorPosition(62rem, 15rem);
 
-      @include media('<lg') {
+      @include media("<lg") {
         top: 54rem;
         left: 12%;
       }
     }
 
     .love-2 {
-      @include vectorPosition(69rem, 8rem, 'top', 'right');
+      @include vectorPosition(69rem, 8rem, "top", "right");
 
-      @include media('<lg') {
+      @include media("<lg") {
         top: 64rem;
         right: 5%;
       }
 
-      @include media('<md') {
+      @include media("<md") {
         top: 73rem;
       }
 
-      @include media('<sm') {
+      @include media("<sm") {
         right: 1%;
       }
 
       svg {
-        @include media('<sm') {
+        @include media("<sm") {
           width: 75%;
-          height: 75%
+          height: 75%;
         }
       }
     }
@@ -147,11 +146,11 @@
     .bulb-1 {
       @include vectorPosition(76rem, 4rem);
 
-      @include media('<lg') {
+      @include media("<lg") {
         top: 65rem;
       }
 
-      @include media('<md') {
+      @include media("<md") {
         top: 95rem;
         left: 1%;
       }
@@ -160,48 +159,48 @@
     .bulb-2 {
       @include vectorPosition(98rem, 6rem);
 
-      @include media('<lg') {
+      @include media("<lg") {
         top: 85rem;
         left: 5%;
       }
 
-      @include media('<md') {
+      @include media("<md") {
         top: 130rem;
         left: 5%;
       }
     }
 
     .blob-4 {
-      @include vectorPosition(85rem, 10rem, 'top', 'right');
+      @include vectorPosition(85rem, 10rem, "top", "right");
 
-      @include media('<xl') {
+      @include media("<xl") {
         top: 79rem;
         right: 5%;
       }
 
-      @include media('<lg') {
+      @include media("<lg") {
         top: 72rem;
         right: 1%;
       }
 
-      @include media('<md') {
+      @include media("<md") {
         top: 128rem;
         right: 20%;
       }
 
-      @include media('<sm') {
+      @include media("<sm") {
         top: 122rem;
         right: 0;
         left: 20%;
       }
 
       svg {
-        @include media('<lg') {
+        @include media("<lg") {
           width: 90%;
           height: 90%;
         }
 
-        @include media('<sm') {
+        @include media("<sm") {
           width: 75%;
           height: 75%;
         }
@@ -216,29 +215,29 @@
     top: 133rem;
     left: 5%;
 
-    @include media('<xl') {
+    @include media("<xl") {
       top: 120rem;
     }
 
-    @include media('<lg') {
+    @include media("<lg") {
       top: 109rem;
     }
 
-    @include media('<md') {
+    @include media("<md") {
       top: 165rem;
     }
 
-    @include media('<sm') {
+    @include media("<sm") {
       top: 162rem;
     }
 
     svg {
-      @include media('<md') {
+      @include media("<md") {
         width: 90%;
         height: 90%;
       }
 
-      @include media('<sm') {
+      @include media("<sm") {
         width: 80%;
         height: 80%;
       }
@@ -252,34 +251,34 @@
     right: 10%;
     transform: rotateX(180deg) rotateZ(180deg);
 
-    @include media('<xxl') {
+    @include media("<xxl") {
       top: 185rem;
     }
 
-    @include media('<xl') {
+    @include media("<xl") {
       top: 172rem;
     }
 
-    @include media('<lg') {
+    @include media("<lg") {
       top: 190rem;
     }
 
-    @include media('<md') {
+    @include media("<md") {
       top: 245rem;
     }
 
-    @include media('<sm') {
+    @include media("<sm") {
       top: 281rem;
       right: 2%;
     }
 
     svg {
-      @include media('<md') {
+      @include media("<md") {
         width: 90%;
         height: 90%;
       }
 
-      @include media('<sm') {
+      @include media("<sm") {
         width: 80%;
         height: 80%;
       }

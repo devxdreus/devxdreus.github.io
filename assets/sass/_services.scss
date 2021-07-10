@@ -3,9 +3,22 @@
   position: relative;
   z-index: 1;
   min-height: 50rem;
+  margin-bottom: 27rem;
+
+  @include media("<xxl") {
+    margin-bottom: 25rem;
+  }
+
+  @include media("<lg") {
+    margin-bottom: 18rem;
+  }
+
+  @include media("<md") {
+    margin-bottom: 15rem;
+  }
 
   &-wrapper {
-    @include container('xl');
+    @include container("xl");
     position: relative;
     z-index: 8;
     display: flex;
@@ -13,7 +26,7 @@
     align-items: center;
     padding: 3rem 1em 0 1em;
 
-    @include media('<sm') {
+    @include media("<sm") {
       padding-top: 7rem;
     }
 
@@ -29,7 +42,7 @@
 
       p {
         font-size: 1.1em;
-        letter-spacing: .05em;
+        letter-spacing: 0.05em;
         line-height: 1.5rem;
         color: #fff;
         max-width: 54rem;
@@ -43,10 +56,10 @@
         height: 4px;
         border-radius: 2px;
         background-color: $color-primary;
-        margin-top: .5rem;
+        margin-top: 0.5rem;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           width: 3rem;
           height: 4px;
@@ -56,7 +69,7 @@
         }
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 1rem;
           height: 4px;
@@ -75,16 +88,16 @@
       width: 100%;
       margin-bottom: 6rem;
 
-      @include media('<lg') {
+      @include media("<lg") {
         grid-template-columns: 50% 50%;
         width: 90%;
       }
 
-      @include media('<md') {
+      @include media("<md") {
         width: 100%;
       }
 
-      @include media('<sm') {
+      @include media("<sm") {
         grid-template-columns: 100%;
         margin-bottom: 7.5rem;
       }
@@ -95,12 +108,12 @@
         height: 18rem;
         margin: 6rem auto;
 
-        @include media('<sm') {
+        @include media("<sm") {
           margin: 3rem auto;
         }
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           width: 8rem;
           height: 26rem;
@@ -109,9 +122,9 @@
           transform: skewX(15deg);
           border-radius: 8px;
           background: #fff;
-          transition: .5s;
+          transition: 0.5s;
 
-          @include media('<sm') {
+          @include media("<sm") {
             width: 6rem;
             height: 22rem;
             left: 4rem;
@@ -119,7 +132,7 @@
         }
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 8rem;
           height: 26rem;
@@ -129,9 +142,9 @@
           border-radius: 8px;
           background: #fff;
           filter: blur(30px);
-          transition: .5s;
+          transition: 0.5s;
 
-          @include media('<sm') {
+          @include media("<sm") {
             height: 22rem;
           }
         }
@@ -153,7 +166,7 @@
           text-align: center;
           color: #fff;
           padding: 1rem;
-          transition: .5s;
+          transition: 0.5s;
 
           img {
             height: 80px;
@@ -163,7 +176,7 @@
           span {
             font-size: 1.2em;
             font-weight: 700;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
           }
 
           p {
@@ -182,11 +195,11 @@
           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
           backdrop-filter: blur(10px);
           border-radius: 8px;
-          transition: .5s;
+          transition: 0.5s;
 
           //===glass animation effect===
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             z-index: 1;
             top: 0;
@@ -197,13 +210,15 @@
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
             border-radius: 8px;
-            transition: .5s;
+            transition: 0.5s;
             opacity: 0;
+            visibility: hidden;
+            // display: none;
             animation: floatingY 2s ease-in-out infinite;
           }
 
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             z-index: 1;
             right: 0;
@@ -214,8 +229,10 @@
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 8px;
-            transition: .5s;
+            transition: 0.5s;
             opacity: 0;
+            visibility: hidden;
+            // display: none;
             animation: floatingY 2s ease-in-out infinite;
             animation-delay: 1s;
           }
@@ -227,7 +244,7 @@
           bottom: -2rem;
           left: -1rem;
 
-          @include media('<sm') {
+          @include media("<sm") {
             top: -1rem;
             right: -0.5rem;
             bottom: -1rem;
@@ -237,6 +254,8 @@
           //===glass animation effect===
           &::before {
             opacity: 1;
+            visibility: visible;
+            // display: block;
             top: -3rem;
             left: 3rem;
             width: 7rem;
@@ -245,6 +264,8 @@
 
           &::after {
             opacity: 1;
+            visibility: visible;
+            // display: block;
             bottom: -3rem;
             right: -1rem;
             width: 7rem;
@@ -258,22 +279,22 @@
 
         &:nth-child(1)::before,
         &:nth-child(1)::after {
-          background: linear-gradient(180deg, #FF0000 0.09%, #80FF00 100%);
+          background: linear-gradient(180deg, #ff0000 0.09%, #80ff00 100%);
         }
 
         &:nth-child(2)::before,
         &:nth-child(2)::after {
-          background: linear-gradient(180deg, #80FF00 0.09%, #00FFFF 100%);
+          background: linear-gradient(180deg, #80ff00 0.09%, #00ffff 100%);
         }
 
         &:nth-child(3)::before,
         &:nth-child(3)::after {
-          background: linear-gradient(180deg, #00FFFF 0.09%, #7F00FF 100%);
+          background: linear-gradient(180deg, #00ffff 0.09%, #7f00ff 100%);
         }
 
         &:nth-child(4)::before,
         &:nth-child(4)::after {
-          background: linear-gradient(180deg, #7F00FF 0.09%, #FF0000 100%);
+          background: linear-gradient(180deg, #7f00ff 0.09%, #ff0000 100%);
         }
       }
     }
@@ -289,27 +310,26 @@
       width: 100%;
       margin-top: -17rem;
 
-      @include media('<xl') {
+      @include media("<xl") {
         margin-top: -15.5rem;
       }
 
-      @include media('<lg') {
+      @include media("<lg") {
         margin-top: -14.5rem;
       }
 
-      @include media('<md') {
+      @include media("<md") {
         height: 350px;
         margin-top: -14rem;
       }
 
-      @include media('<sm') {
+      @include media("<sm") {
         margin-top: -12.5rem;
       }
-
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       height: 2rem;
@@ -325,28 +345,28 @@
     z-index: -2;
     width: 100%;
 
-    @include media('<xxl') {
+    @include media("<xxl") {
       bottom: -33rem;
     }
 
-    @include media('<xl') {
+    @include media("<xl") {
       bottom: -31rem;
     }
 
-    @include media('<lg') {
+    @include media("<lg") {
       bottom: -28rem;
     }
 
-    @include media('<md') {
+    @include media("<md") {
       bottom: -25rem;
     }
 
-    @include media('<sm') {
+    @include media("<sm") {
       bottom: -23rem;
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       height: 3.5rem;
@@ -354,23 +374,23 @@
       top: 0;
       left: 0;
 
-      @include media('<xxl') {
+      @include media("<xxl") {
         top: 1rem;
       }
 
-      @include media('<xl') {
-        top: 3.5rem
+      @include media("<xl") {
+        top: 3.5rem;
       }
 
-      @include media('<lg') {
+      @include media("<lg") {
         top: 6rem;
       }
 
-      @include media('<md') {
+      @include media("<md") {
         top: 8.5rem;
       }
 
-      @include media('<sm') {
+      @include media("<sm") {
         top: 11rem;
       }
     }
@@ -379,11 +399,9 @@
       width: 100%;
     }
   }
-
 }
 
 @keyframes floatingY {
-
   0%,
   100% {
     transform: translateY(10px);

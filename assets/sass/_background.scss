@@ -51,6 +51,10 @@
     @include media("<md") {
       top: 20rem;
     }
+
+    @include media("<sm") {
+      top: 30rem;
+    }
   }
 
   .blob-3 {
@@ -102,6 +106,10 @@
 
   .dot-square {
     @include vectorPosition(45rem, 0);
+
+    @include media("<sm") {
+      top: 50rem;
+    }
   }
 
   // about area
@@ -116,6 +124,10 @@
       @include media("<lg") {
         top: 54rem;
         left: 12%;
+      }
+
+      @include media("<sm") {
+        top: 60rem;
       }
     }
 

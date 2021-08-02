@@ -13,6 +13,15 @@
       font-size: 3.5em;
       font-weight: 900;
       letter-spacing: 0.1em;
+      padding: 0 1rem;
+
+      @include media("<md") {
+        font-size: 3.25em;
+      }
+
+      @include media("<sm") {
+        font-size: 2.5em;
+      }
 
       span {
         color: $color-primary;
@@ -21,10 +30,11 @@
 
     p {
       font-size: 1.1em;
-      letter-spacing: .05em;
+      letter-spacing: 0.05em;
       line-height: 1.5rem;
       max-width: 54rem;
       margin: 2rem auto;
+      padding: 0 1rem;
     }
 
     .skills {
@@ -33,7 +43,7 @@
       column-gap: 2rem;
 
       &-img {
-        @include media('<md') {
+        @include media("<md") {
           margin: auto;
           width: 80%;
         }
@@ -51,14 +61,14 @@
           display: inline-block;
           position: relative;
           font-family: $font-family;
-          letter-spacing: .05em;
+          letter-spacing: 0.05em;
           font-size: 1em;
           font-weight: 500;
           text-decoration: none;
           color: $color-primary;
           margin-right: 3rem;
           margin-bottom: 1.5rem;
-          padding: .3rem .2rem;
+          padding: 0.3rem 0.2rem;
 
           &.active,
           &:hover {
@@ -66,7 +76,7 @@
           }
 
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             display: block;
             width: 0;
@@ -75,7 +85,7 @@
             bottom: 0;
             left: 0;
             border-radius: 1px;
-            transition: .3s;
+            transition: 0.3s;
           }
 
           &:hover::after,
@@ -88,13 +98,13 @@
           // overflow-x: hidden;
 
           .skill-box {
-            padding: .8rem 1.5rem;
+            padding: 0.8rem 1.5rem;
             border-radius: 4px;
             background-color: adjust-color($color: #eeeeee, $alpha: -0.5);
             box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.25);
             backdrop-filter: blur(10px);
             margin-bottom: 1.2rem;
-            transition: .5s ease-in-out;
+            transition: 0.5s ease-in-out;
             display: none;
             opacity: 0;
             transform: translateX(8rem);
@@ -104,16 +114,15 @@
             }
 
             &.show-transition {
-              transition: .3s;
+              transition: 0.3s;
               opacity: 1;
               transform: translateX(0);
             }
 
-
             .skill-name {
               display: flex;
               justify-content: space-between;
-              margin-bottom: .5rem;
+              margin-bottom: 0.5rem;
               // font-size: .9em;
 
               span {
@@ -124,7 +133,7 @@
             .slider-container {
               border: 3px solid $color-primary;
               border-radius: 4px;
-              padding: .2rem;
+              padding: 0.2rem;
 
               .slider {
                 width: 50%;
@@ -141,11 +150,10 @@
         }
       }
 
-      @include media('<md') {
+      @include media("<md") {
         grid-template-columns: 100%;
       }
     }
-
   }
 
   .wave-1 svg {
@@ -156,7 +164,7 @@
     width: 100%;
     margin-top: -10rem;
 
-    @include media('<sm') {
+    @include media("<sm") {
       margin-top: -9rem;
     }
   }

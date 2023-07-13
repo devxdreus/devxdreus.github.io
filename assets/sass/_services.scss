@@ -1,415 +1,431 @@
 .services {
-  background-color: #333;
-  position: relative;
-  z-index: 1;
-  min-height: 50rem;
-  margin-bottom: 27rem;
-
-  @include media("<xxl") {
-    margin-bottom: 25rem;
-  }
-
-  @include media("<lg") {
-    margin-bottom: 18rem;
-  }
-
-  @include media("<md") {
-    margin-bottom: 15rem;
-  }
-
-  &-wrapper {
-    @include container("xl");
+    background-color: #333;
     position: relative;
-    z-index: 8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 1em 0 1em;
+    z-index: 1;
+    min-height: 50rem;
+    margin-bottom: 27rem;
 
-    @include media("<sm") {
-      padding-top: 7rem;
+    @include media('<xxl') {
+        margin-bottom: 25rem;
     }
 
-    .heading {
-      text-align: center;
-
-      h2 {
-        font-size: 3.5em;
-        font-weight: 900;
-        letter-spacing: 0.1em;
-        color: #fff;
-      }
-
-      p {
-        font-size: 1.1em;
-        letter-spacing: 0.05em;
-        line-height: 1.5rem;
-        color: #fff;
-        max-width: 54rem;
-        margin: 2rem auto;
-      }
-
-      span {
-        position: absolute;
-        display: block;
-        width: 8rem;
-        height: 4px;
-        border-radius: 2px;
-        background-color: $color-primary;
-        margin-top: 0.5rem;
-
-        &::before {
-          content: "";
-          position: absolute;
-          width: 3rem;
-          height: 4px;
-          border-radius: 2px;
-          background-color: $color-primary;
-          right: -3.5rem;
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          width: 1rem;
-          height: 4px;
-          border-radius: 2px;
-          background-color: $color-primary;
-          right: -5rem;
-        }
-      }
+    @include media('<lg') {
+        margin-bottom: 18rem;
     }
 
-    .services-tab {
-      display: grid;
-      grid-template-columns: 25% 25% 25% 25%;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 6rem;
-      position: relative;
-      z-index: 9;
+    @include media('<md') {
+        margin-bottom: 15rem;
+    }
 
-      @include media("<lg") {
-        grid-template-columns: 50% 50%;
-        width: 90%;
-      }
-
-      @include media("<md") {
-        width: 100%;
-      }
-
-      @include media("<sm") {
-        grid-template-columns: 100%;
-        margin-bottom: 7.5rem;
-      }
-
-      .box-wrapper {
+    &-wrapper {
+        @include container('xl');
         position: relative;
-        width: 14rem;
-        height: 18rem;
-        margin: 6rem auto;
+        z-index: 8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 1em 0 1em;
 
-        @include media("<sm") {
-          margin: 3rem auto;
+        @include media('<sm') {
+            padding-top: 7rem;
         }
 
-        &::before {
-          content: "";
-          position: absolute;
-          width: 8rem;
-          height: 26rem;
-          top: -2rem;
-          left: 3rem;
-          transform: skewX(15deg);
-          border-radius: 8px;
-          background: #fff;
-          transition: 0.5s;
+        .heading {
+            text-align: center;
 
-          @include media("<sm") {
-            width: 6rem;
-            height: 22rem;
-            left: 4rem;
-          }
+            h2 {
+                font-size: 3.5em;
+                font-weight: 900;
+                letter-spacing: 0.1em;
+                color: #fff;
+            }
+
+            p {
+                font-size: 1.1em;
+                letter-spacing: 0.05em;
+                line-height: 1.5rem;
+                color: #fff;
+                max-width: 54rem;
+                margin: 2rem auto;
+            }
+
+            span {
+                position: absolute;
+                display: block;
+                width: 8rem;
+                height: 4px;
+                border-radius: 2px;
+                background-color: $color-primary;
+                margin-top: 0.5rem;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 3rem;
+                    height: 4px;
+                    border-radius: 2px;
+                    background-color: $color-primary;
+                    right: -3.5rem;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 1rem;
+                    height: 4px;
+                    border-radius: 2px;
+                    background-color: $color-primary;
+                    right: -5rem;
+                }
+            }
         }
 
-        &::after {
-          content: "";
-          position: absolute;
-          width: 8rem;
-          height: 26rem;
-          top: -2rem;
-          left: 3rem;
-          transform: skewX(15deg);
-          border-radius: 8px;
-          background: #fff;
-          filter: blur(30px);
-          transition: 0.5s;
+        .services-tab {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 6rem;
+            position: relative;
+            z-index: 9;
 
-          @include media("<sm") {
-            height: 22rem;
-          }
+            @include media('<lg') {
+                grid-template-columns: 50% 50%;
+                width: 90%;
+            }
+
+            @include media('<md') {
+                width: 100%;
+            }
+
+            @include media('<sm') {
+                grid-template-columns: 100%;
+                margin-bottom: 7.5rem;
+            }
+
+            .box-wrapper {
+                position: relative;
+                width: 14rem;
+                height: 21rem;
+                margin: 6rem auto;
+
+                @include media('<sm') {
+                    margin: 3rem auto;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 8rem;
+                    height: 26rem;
+                    top: -2rem;
+                    left: 3rem;
+                    transform: skewX(15deg);
+                    border-radius: 8px;
+                    background: #fff;
+                    transition: 0.5s;
+
+                    @include media('<sm') {
+                        width: 6rem;
+                        height: 22rem;
+                        left: 4rem;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 8rem;
+                    height: 26rem;
+                    top: -2rem;
+                    left: 3rem;
+                    transform: skewX(15deg);
+                    border-radius: 8px;
+                    background: #fff;
+                    filter: blur(30px);
+                    transition: 0.5s;
+
+                    @include media('<sm') {
+                        height: 22rem;
+                    }
+                }
+
+                &:hover::before,
+                &:hover::after {
+                    transform: skewX(0);
+                    left: 5%;
+                    width: 90%;
+                }
+
+                .content-box {
+                    position: relative;
+                    z-index: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    color: #fff;
+                    padding: 1rem;
+                    transition: 0.5s;
+
+                    img {
+                        height: 80px;
+                        margin-bottom: 1rem;
+                    }
+
+                    span {
+                        font-size: 1.2em;
+                        font-weight: 700;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    p {
+                        line-height: 120%;
+                        font-weight: 300;
+                    }
+                }
+
+                .glass-box {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: rgba(255, 255, 255, 0.05);
+                    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(10px);
+                    border-radius: 8px;
+                    transition: 0.5s;
+
+                    //===glass animation effect===
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(255, 255, 255, 0.5);
+                        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+                        backdrop-filter: blur(10px);
+                        border-radius: 8px;
+                        transition: 0.5s;
+                        opacity: 0;
+                        visibility: hidden;
+                        // display: none;
+                        animation: floatingY 2s ease-in-out infinite;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        z-index: 1;
+                        right: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(255, 255, 255, 0.1);
+                        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(10px);
+                        border-radius: 8px;
+                        transition: 0.5s;
+                        opacity: 0;
+                        visibility: hidden;
+                        // display: none;
+                        animation: floatingY 2s ease-in-out infinite;
+                        animation-delay: 1s;
+                    }
+                }
+
+                &:hover .glass-box {
+                    top: -2rem;
+                    right: -1rem;
+                    bottom: -2rem;
+                    left: -1rem;
+
+                    @include media('<sm') {
+                        top: -1rem;
+                        right: -0.5rem;
+                        bottom: -1rem;
+                        left: -0.5rem;
+                    }
+
+                    //===glass animation effect===
+                    &::before {
+                        opacity: 1;
+                        visibility: visible;
+                        // display: block;
+                        top: -3rem;
+                        left: 3rem;
+                        width: 7rem;
+                        height: 7rem;
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        visibility: visible;
+                        // display: block;
+                        bottom: -3rem;
+                        right: -1rem;
+                        width: 7rem;
+                        height: 7rem;
+                    }
+                }
+
+                &:hover .content-box {
+                    transform: translateY(-10px);
+                }
+
+                &:nth-child(1)::before,
+                &:nth-child(1)::after {
+                    background: linear-gradient(
+                        180deg,
+                        #ff0000 0.09%,
+                        #80ff00 100%
+                    );
+                }
+
+                &:nth-child(2)::before,
+                &:nth-child(2)::after {
+                    background: linear-gradient(
+                        180deg,
+                        #5dba00 0.09%,
+                        #00c4c4 100%
+                    );
+                }
+
+                &:nth-child(3)::before,
+                &:nth-child(3)::after {
+                    background: linear-gradient(
+                        180deg,
+                        #00ffff 0.09%,
+                        #7f00ff 100%
+                    );
+                }
+
+                &:nth-child(4)::before,
+                &:nth-child(4)::after {
+                    background: linear-gradient(
+                        180deg,
+                        #7f00ff 0.09%,
+                        #ff0000 100%
+                    );
+                }
+            }
         }
+    }
 
-        &:hover::before,
-        &:hover::after {
-          transform: skewX(0);
-          left: 5%;
-          width: 90%;
-        }
+    .wave-2 {
+        position: relative;
 
-        .content-box {
-          position: relative;
-          z-index: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          color: #fff;
-          padding: 1rem;
-          transition: 0.5s;
-
-          img {
-            height: 80px;
-            margin-bottom: 1rem;
-          }
-
-          span {
-            font-size: 1.2em;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-          }
-
-          p {
-            line-height: 120%;
-            font-weight: 300;
-          }
-        }
-
-        .glass-box {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          background: rgba(255, 255, 255, 0.05);
-          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-          backdrop-filter: blur(10px);
-          border-radius: 8px;
-          transition: 0.5s;
-
-          //===glass animation effect===
-          &::before {
-            content: "";
+        svg {
             position: absolute;
-            z-index: 1;
-            top: 0;
+            z-index: -2;
             left: 0;
             width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 8px;
-            transition: 0.5s;
-            opacity: 0;
-            visibility: hidden;
-            // display: none;
-            animation: floatingY 2s ease-in-out infinite;
-          }
+            margin-top: -17rem;
 
-          &::after {
-            content: "";
+            @include media('<xl') {
+                margin-top: -15.5rem;
+            }
+
+            @include media('<lg') {
+                margin-top: -14.5rem;
+            }
+
+            @include media('<md') {
+                height: 350px;
+                margin-top: -14rem;
+            }
+
+            @include media('<sm') {
+                margin-top: -12.5rem;
+            }
+        }
+
+        &::after {
+            content: '';
             position: absolute;
-            z-index: 1;
-            right: 0;
-            bottom: 0;
             width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 8px;
-            transition: 0.5s;
-            opacity: 0;
-            visibility: hidden;
-            // display: none;
-            animation: floatingY 2s ease-in-out infinite;
-            animation-delay: 1s;
-          }
+            height: 2rem;
+            background-color: #333;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .wave-3 {
+        position: absolute;
+        bottom: -36rem;
+        z-index: -2;
+        width: 100%;
+
+        @include media('<xxl') {
+            bottom: -33rem;
         }
 
-        &:hover .glass-box {
-          top: -2rem;
-          right: -1rem;
-          bottom: -2rem;
-          left: -1rem;
-
-          @include media("<sm") {
-            top: -1rem;
-            right: -0.5rem;
-            bottom: -1rem;
-            left: -0.5rem;
-          }
-
-          //===glass animation effect===
-          &::before {
-            opacity: 1;
-            visibility: visible;
-            // display: block;
-            top: -3rem;
-            left: 3rem;
-            width: 7rem;
-            height: 7rem;
-          }
-
-          &::after {
-            opacity: 1;
-            visibility: visible;
-            // display: block;
-            bottom: -3rem;
-            right: -1rem;
-            width: 7rem;
-            height: 7rem;
-          }
+        @include media('<xl') {
+            bottom: -31rem;
         }
 
-        &:hover .content-box {
-          transform: translateY(-10px);
+        @include media('<lg') {
+            bottom: -28rem;
         }
 
-        &:nth-child(1)::before,
-        &:nth-child(1)::after {
-          background: linear-gradient(180deg, #ff0000 0.09%, #80ff00 100%);
+        @include media('<md') {
+            bottom: -25rem;
         }
 
-        &:nth-child(2)::before,
-        &:nth-child(2)::after {
-          background: linear-gradient(180deg, #80ff00 0.09%, #00ffff 100%);
+        @include media('<sm') {
+            bottom: -23rem;
         }
 
-        &:nth-child(3)::before,
-        &:nth-child(3)::after {
-          background: linear-gradient(180deg, #00ffff 0.09%, #7f00ff 100%);
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3.5rem;
+            background-color: #333;
+            top: 0;
+            left: 0;
+
+            @include media('<xxl') {
+                top: 1rem;
+            }
+
+            @include media('<xl') {
+                top: 3.5rem;
+            }
+
+            @include media('<lg') {
+                top: 6rem;
+            }
+
+            @include media('<md') {
+                top: 8.5rem;
+            }
+
+            @include media('<sm') {
+                top: 11rem;
+            }
         }
 
-        &:nth-child(4)::before,
-        &:nth-child(4)::after {
-          background: linear-gradient(180deg, #7f00ff 0.09%, #ff0000 100%);
+        svg {
+            width: 100%;
         }
-      }
     }
-  }
-
-  .wave-2 {
-    position: relative;
-
-    svg {
-      position: absolute;
-      z-index: -2;
-      left: 0;
-      width: 100%;
-      margin-top: -17rem;
-
-      @include media("<xl") {
-        margin-top: -15.5rem;
-      }
-
-      @include media("<lg") {
-        margin-top: -14.5rem;
-      }
-
-      @include media("<md") {
-        height: 350px;
-        margin-top: -14rem;
-      }
-
-      @include media("<sm") {
-        margin-top: -12.5rem;
-      }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2rem;
-      background-color: #333;
-      top: 0;
-      left: 0;
-    }
-  }
-
-  .wave-3 {
-    position: absolute;
-    bottom: -36rem;
-    z-index: -2;
-    width: 100%;
-
-    @include media("<xxl") {
-      bottom: -33rem;
-    }
-
-    @include media("<xl") {
-      bottom: -31rem;
-    }
-
-    @include media("<lg") {
-      bottom: -28rem;
-    }
-
-    @include media("<md") {
-      bottom: -25rem;
-    }
-
-    @include media("<sm") {
-      bottom: -23rem;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 3.5rem;
-      background-color: #333;
-      top: 0;
-      left: 0;
-
-      @include media("<xxl") {
-        top: 1rem;
-      }
-
-      @include media("<xl") {
-        top: 3.5rem;
-      }
-
-      @include media("<lg") {
-        top: 6rem;
-      }
-
-      @include media("<md") {
-        top: 8.5rem;
-      }
-
-      @include media("<sm") {
-        top: 11rem;
-      }
-    }
-
-    svg {
-      width: 100%;
-    }
-  }
 }
 
 @keyframes floatingY {
-  0%,
-  100% {
-    transform: translateY(10px);
-  }
+    0%,
+    100% {
+        transform: translateY(10px);
+    }
 
-  50% {
-    transform: translateY(-10px);
-  }
+    50% {
+        transform: translateY(-10px);
+    }
 }

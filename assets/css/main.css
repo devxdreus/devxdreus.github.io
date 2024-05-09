@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500;700;900&display=swap');
 html,
 body,
 div,
@@ -121,7 +121,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -130,9 +130,13 @@ table {
   border-spacing: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -188,7 +192,7 @@ header nav .logo {
 }
 header nav .logo span {
   display: inline-block;
-  font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
   font-size: 1.3em;
   color: #6a12e8;
   padding-right: 0.75rem;
@@ -229,7 +233,7 @@ header nav .nav-menu {
     letter-spacing: 0.2em;
   }
   header nav .nav-menu::before {
-    content: "";
+    content: '';
     position: fixed;
     visibility: hidden;
     opacity: 0;
@@ -268,11 +272,12 @@ header nav .nav-menu a {
   padding: 0.5rem 0.3rem;
   transition: 0.3s;
 }
-header nav .nav-menu a.active, header nav .nav-menu a:hover {
+header nav .nav-menu a.active,
+header nav .nav-menu a:hover {
   color: #6a12e8;
 }
 header nav .nav-menu a::after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   width: 0;
@@ -283,7 +288,8 @@ header nav .nav-menu a::after {
   border-radius: 1px;
   transition: 0.3s;
 }
-header nav .nav-menu a:hover::after, header nav .nav-menu a.active::after {
+header nav .nav-menu a:hover::after,
+header nav .nav-menu a.active::after {
   width: 100%;
 }
 header nav .nav-toggle {
@@ -585,7 +591,7 @@ header nav .nav-social .btn-primary:hover {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 0.05em;
   font-size: 1em;
   font-weight: 500;
@@ -595,11 +601,12 @@ header nav .nav-social .btn-primary:hover {
   margin-bottom: 1.5rem;
   padding: 0.3rem 0.2rem;
 }
-.about-wrapper .skills-wrapper nav button.active, .about-wrapper .skills-wrapper nav button:hover {
+.about-wrapper .skills-wrapper nav button.active,
+.about-wrapper .skills-wrapper nav button:hover {
   color: #6a12e8;
 }
 .about-wrapper .skills-wrapper nav button::after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   width: 0;
@@ -610,7 +617,8 @@ header nav .nav-social .btn-primary:hover {
   border-radius: 1px;
   transition: 0.3s;
 }
-.about-wrapper .skills-wrapper nav button:hover::after, .about-wrapper .skills-wrapper nav button.active::after {
+.about-wrapper .skills-wrapper nav button:hover::after,
+.about-wrapper .skills-wrapper nav button.active::after {
   width: 100%;
 }
 .about-wrapper .skills-wrapper .skills-set .skill-box {
@@ -646,7 +654,12 @@ header nav .nav-social .btn-primary:hover {
   border-radius: 4px;
   padding: 0.2rem;
 }
-.about-wrapper .skills-wrapper .skills-set .skill-box .slider-container .slider {
+.about-wrapper
+  .skills-wrapper
+  .skills-set
+  .skill-box
+  .slider-container
+  .slider {
   width: 50%;
   height: 1.5rem;
   background-color: #6a12e8;
@@ -752,7 +765,7 @@ header nav .nav-social .btn-primary:hover {
   margin-top: 0.5rem;
 }
 .services-wrapper .heading span::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 3rem;
   height: 4px;
@@ -761,7 +774,7 @@ header nav .nav-social .btn-primary:hover {
   right: -3.5rem;
 }
 .services-wrapper .heading span::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 1rem;
   height: 4px;
@@ -808,7 +821,7 @@ header nav .nav-social .btn-primary:hover {
   }
 }
 .services-wrapper .services-tab .box-wrapper::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 8rem;
   height: 26rem;
@@ -827,7 +840,7 @@ header nav .nav-social .btn-primary:hover {
   }
 }
 .services-wrapper .services-tab .box-wrapper::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 8rem;
   height: 26rem;
@@ -844,7 +857,8 @@ header nav .nav-social .btn-primary:hover {
     height: 22rem;
   }
 }
-.services-wrapper .services-tab .box-wrapper:hover::before, .services-wrapper .services-tab .box-wrapper:hover::after {
+.services-wrapper .services-tab .box-wrapper:hover::before,
+.services-wrapper .services-tab .box-wrapper:hover::after {
   transform: skewX(0);
   left: 5%;
   width: 90%;
@@ -887,7 +901,7 @@ header nav .nav-social .btn-primary:hover {
   transition: 0.5s;
 }
 .services-wrapper .services-tab .box-wrapper .glass-box::before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 1;
   top: 0;
@@ -904,7 +918,7 @@ header nav .nav-social .btn-primary:hover {
   animation: floatingY 2s ease-in-out infinite;
 }
 .services-wrapper .services-tab .box-wrapper .glass-box::after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 1;
   right: 0;
@@ -954,16 +968,20 @@ header nav .nav-social .btn-primary:hover {
 .services-wrapper .services-tab .box-wrapper:hover .content-box {
   transform: translateY(-10px);
 }
-.services-wrapper .services-tab .box-wrapper:nth-child(1)::before, .services-wrapper .services-tab .box-wrapper:nth-child(1)::after {
+.services-wrapper .services-tab .box-wrapper:nth-child(1)::before,
+.services-wrapper .services-tab .box-wrapper:nth-child(1)::after {
   background: linear-gradient(180deg, #ff0000 0.09%, #80ff00 100%);
 }
-.services-wrapper .services-tab .box-wrapper:nth-child(2)::before, .services-wrapper .services-tab .box-wrapper:nth-child(2)::after {
+.services-wrapper .services-tab .box-wrapper:nth-child(2)::before,
+.services-wrapper .services-tab .box-wrapper:nth-child(2)::after {
   background: linear-gradient(180deg, #5dba00 0.09%, #00c4c4 100%);
 }
-.services-wrapper .services-tab .box-wrapper:nth-child(3)::before, .services-wrapper .services-tab .box-wrapper:nth-child(3)::after {
+.services-wrapper .services-tab .box-wrapper:nth-child(3)::before,
+.services-wrapper .services-tab .box-wrapper:nth-child(3)::after {
   background: linear-gradient(180deg, #00ffff 0.09%, #7f00ff 100%);
 }
-.services-wrapper .services-tab .box-wrapper:nth-child(4)::before, .services-wrapper .services-tab .box-wrapper:nth-child(4)::after {
+.services-wrapper .services-tab .box-wrapper:nth-child(4)::before,
+.services-wrapper .services-tab .box-wrapper:nth-child(4)::after {
   background: linear-gradient(180deg, #7f00ff 0.09%, #ff0000 100%);
 }
 .services .wave-2 {
@@ -998,7 +1016,7 @@ header nav .nav-social .btn-primary:hover {
   }
 }
 .services .wave-2::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 2rem;
@@ -1038,7 +1056,7 @@ header nav .nav-social .btn-primary:hover {
   }
 }
 .services .wave-3::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 3.5rem;
@@ -1076,7 +1094,8 @@ header nav .nav-social .btn-primary:hover {
 }
 
 @keyframes floatingY {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(10px);
   }
   50% {
@@ -1122,7 +1141,7 @@ header nav .nav-social .btn-primary:hover {
   display: inline-block;
 }
 .project-wrapper .heading .line::before {
-  content: "";
+  content: '';
   position: relative;
   display: inline-block;
   width: 5rem;
@@ -1131,7 +1150,7 @@ header nav .nav-social .btn-primary:hover {
   background-color: #6a12e8;
 }
 .project-wrapper .heading .line::after {
-  content: "";
+  content: '';
   position: relative;
   display: inline-block;
   width: 1.5rem;
@@ -1216,7 +1235,7 @@ footer {
 }
 footer .logo a {
   text-decoration: none;
-  font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
   font-size: 2.5em;
   color: #6a12e8;
 }
@@ -1259,7 +1278,7 @@ footer .copyright p a {
   top: 13rem;
   width: 100%;
   height: 95%;
-  background-image: url("../vector/dotted.svg");
+  background-image: url('../vector/dotted.svg');
   background-size: contain;
 }
 .bg-vector .blob-1 {
